@@ -30,7 +30,7 @@ def add_member(e):
     last_name = document.getElementById("last-name").value
 
     # Format the new member's name
-    full_name = f"{first_name.strip().title()} {last_name.strip().title()}"
+    full_name = f"{first_name.title()} {last_name.title()}"
 
     # Add the new member using union
     new_member = {full_name}
