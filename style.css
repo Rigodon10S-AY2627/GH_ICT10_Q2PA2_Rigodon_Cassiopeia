@@ -1,0 +1,176 @@
+
+/* General Page Styling */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eef3fb;
+    color: #243451;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #172c4a, #315b91);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+    border-bottom: 5px solid #91b8e8;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 8px;
+}
+
+.header h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+}
+
+.header p {
+    color: #d8e7fa;
+    font-size: 1rem;
+}
+
+/* Main Container */
+.main-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+/* Panels */
+.panel {
+    height: 100%;
+    padding: 28px;
+    background-color: white;
+    border: 1px solid #d8e3f1;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(23, 44, 74, 0.08);
+}
+
+/* Section Titles */
+.section-title {
+    color: #234c80;
+    font-size: 1.35rem;
+    font-weight: bold;
+    padding-bottom: 14px;
+    margin-bottom: 22px;
+    border-bottom: 2px solid #e2ebf7;
+}
+
+/* Form Labels */
+.form-label {
+    color: #334b6b;
+    font-weight: 600;
+}
+
+/* Text Inputs */
+.form-control {
+    padding: 11px 13px;
+    border: 1px solid #cbd8e9;
+    border-radius: 8px;
+    background-color: #f9fbff;
+}
+
+.form-control:focus {
+    border-color: #527fb8;
+    box-shadow: 0 0 0 3px rgba(82, 127, 184, 0.15);
+    background-color: white;
+}
+
+/* Add Member Button */
+.add-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #234c80;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.add-button:hover {
+    background-color: #17365e;
+    transform: translateY(-2px);
+}
+
+.add-button:active {
+    transform: translateY(0);
+}
+
+/* Member Results */
+#results {
+    padding: 18px;
+    background-color: #f7faff;
+    border: 1px solid #e0e9f5;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+#results h3 {
+    color: #234c80;
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #d8e3f1;
+}
+
+/* Vertically Arrange Member Names */
+.member-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.member-list div {
+    padding: 10px 12px;
+    background-color: white;
+    border: 1px solid #e0e9f5;
+    border-left: 4px solid #527fb8;
+    border-radius: 6px;
+    color: #334b6b;
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    padding: 22px 15px;
+    background-color: #172c4a;
+    color: #d8e7fa;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 32px 15px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header h2 {
+        font-size: 1.1rem;
+    }
+
+    .main-container {
+        margin: 25px auto;
+        padding: 0 16px;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+}
