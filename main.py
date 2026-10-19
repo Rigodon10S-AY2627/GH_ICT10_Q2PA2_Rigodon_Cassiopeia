@@ -1,5 +1,6 @@
+
 # PA2 - Working with Sets
-from pyscript import display, document
+from pyscript import document
 
 # Predefined Grade 7 members
 grade_7 = {"Victoria Rivera", "Reuben Lim", "Antonio Manalo"}
@@ -16,14 +17,29 @@ grade_10 = {"Lara Estrada", "Cassiopeia Rigodon", "Zangief Briones"}
 # Combine all grade sets using union
 ict_members = grade_7 | grade_8 | grade_9 | grade_10
 
-# Display the initial member count
-display(f"Total Members: {len(ict_members)}", target="results")
-
-# Display the initial member list
-display(ict_members, target="results")
+# Display the initial member count and list
+document.getElementById("results").innerHTML = (
+    f"<h3>Total Members: {len(ict_members)}</h3>"
+    f"<div class='member-list'>"
+    f"<div>Victoria Rivera</div>"
+    f"<div>Reuben Lim</div>"
+    f"<div>Antonio Manalo</div>"
+    f"<div>Elaina Daclan</div>"
+    f"<div>Kristine Manabat</div>"
+    f"<div>Arkin Cuenca</div>"
+    f"<div>Cedric Visorde</div>"
+    f"<div>Dan Perez</div>"
+    f"<div>Na Yeon Kim</div>"
+    f"<div>Lara Estrada</div>"
+    f"<div>Cassiopeia Rigodon</div>"
+    f"<div>Zangief Briones</div>"
+    f"</div>"
+)
 
 
 def add_member(e):
+    global ict_members
+
     # Get the names entered by the user
     first_name = document.getElementById("first-name").value
     last_name = document.getElementById("last-name").value
@@ -33,7 +49,24 @@ def add_member(e):
 
     # Add the new member using union
     new_member = {full_name}
-    updated_members = ict_members | new_member
+    ict_members = ict_members | new_member
 
-    # Display the updated total and member list
-    document.getElementById("results").innerHTML = (f"<h3>Total Members: {len(updated_members)}</h3><p>Victoria Rivera, Reuben Lim, Antonio Manalo, Elaina Daclan, Kristine Manabat, Arkin Cuenca, Cedric Visorde, Dan Perez, Na Yeon Kim, Lara Estrada, Cassiopeia Rigodon, Zangief Briones, {full_name}</p>")
+    # Display the updated member count and list - I googled how to do this part 
+    document.getElementById("results").innerHTML = (
+        f"<h3>Total Members: {len(ict_members)}</h3>"
+        f"<div class='member-list'>"
+        f"<div>Victoria Rivera</div>"
+        f"<div>Reuben Lim</div>"
+        f"<div>Antonio Manalo</div>"
+        f"<div>Elaina Daclan</div>"
+        f"<div>Kristine Manabat</div>"
+        f"<div>Arkin Cuenca</div>"
+        f"<div>Cedric Visorde</div>"
+        f"<div>Dan Perez</div>"
+        f"<div>Na Yeon Kim</div>"
+        f"<div>Lara Estrada</div>"
+        f"<div>Cassiopeia Rigodon</div>"
+        f"<div>Zangief Briones</div>"
+        f"<div>{full_name}</div>"
+        f"</div>"
+    )
