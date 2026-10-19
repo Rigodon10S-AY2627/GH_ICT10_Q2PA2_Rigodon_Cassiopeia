@@ -37,4 +37,4 @@ def add_member(e):
     updated_members = ict_members | new_member
 
     # Display the updated total and member list
-    document.getElementById("results").innerHTML = (f"<h3>Total Members: {len(updated_members)}</h3><p>Victoria Rivera, Reuben Lim, Antonio Manalo, Elaina Daclan, Kristine Manabat, Arkin Cuenca, Cedric Visorde, Dan Perez, Na Yeon Kim, Lara Estrada, Cassiopeia Rigodon, Zangief Briones, {full_name}</p>")
+    document.getElementById("results").innerHTML = (f"Total Members: {len(updated_members)} Victoria Rivera, Reuben Lim, Antonio Manalo, Elaina Daclan, Kristine Manabat, Arkin Cuenca, Cedric Visorde, Dan Perez, Na Yeon Kim, Lara Estrada, Cassiopeia Rigodon, Zangief Briones, {full_name}")
